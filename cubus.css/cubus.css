@@ -67,11 +67,16 @@ Last Update: 25.06.2022
 /* still scenes */
 .cube__still-x-45-top {transform: rotateX(-20deg) rotateY(45deg);}
 
-/* --- animation classes --- */
+/* --- animation --- */
 .cube__animation-xy-360 {animation: xy-360 10s infinite linear;}
 .cube__animation-x-360 {animation: x-360 10s infinite linear;}
 .cube__animation-y-360 {animation: y-360 10s infinite linear;}
 .cube__animation-y-360-top {animation: y-360-top 10s infinite linear;}
+
+/* --- animation duration */
+.cube__animation-duration-2 {animation-duration: 2s;}
+.cube__animation-duration-5 {animation-duration: 5s;}
+.cube__animation-duration-8 {animation-duration: 8s;}
 
 /* animations */
 @keyframes xy-360 {
