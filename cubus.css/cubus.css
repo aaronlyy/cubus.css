@@ -71,7 +71,7 @@ Last Update: 25.06.2022
 .cube__animation-xy-360 {animation: xy-360 10s infinite linear;}
 .cube__animation-x-360 {animation: x-360 10s infinite linear;}
 .cube__animation-y-360 {animation: y-360 10s infinite linear;}
-.cube__animation-top-y-360 {animation: y-360-top 10s infinite linear;}
+.cube__animation-y-360-top {animation: y-360-top 10s infinite linear;}
 
 /* animations */
 @keyframes xy-360 {
