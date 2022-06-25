@@ -1,0 +1,111 @@
+/* 
+Author: https://github.com/aaronlyy
+Last Update: 25.06.2022
+*/
+
+:root {
+    --cube-size: 4rem;
+    --cube-translate-z: calc(var(--cube-size)/2);
+}
+
+.cube__scene {
+    width: var(--cube-size);
+    height: var(--cube-size);
+    perspective: calc(var(--cube-size)*5);
+}
+
+.cube {
+    transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.cube__face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(138, 43, 226);
+    border: 1px solid black;
+}
+
+/* --- rotate faces --- */
+/* top */
+.cube__face:nth-child(1) {transform: rotateX(90deg) translateZ(calc(var(--cube-size)/2));}
+/* bottom */
+.cube__face:nth-child(2) {transform: rotateX(-90deg) translateZ(calc(var(--cube-size)/2));}
+/* left */
+.cube__face:nth-child(3) {transform: rotateY(-90deg) translateZ(calc(var(--cube-size)/2));}
+/* right */
+.cube__face:nth-child(4) {transform: rotateY(90deg) translateZ(calc(var(--cube-size)/2));}
+/* front */
+.cube__face:nth-child(5) {transform: rotateX(0deg) translateZ(calc(var(--cube-size)/2));}
+/* back */
+.cube__face:nth-child(6) {transform: rotateY(-180deg) translateZ(calc(var(--cube-size)/2));}
+
+/* sizes */
+.cube__size-1rem {--cube-size: 1rem;}
+.cube__size-2rem {--cube-size: 2rem;}
+.cube__size-3rem {--cube-size: 3rem;}
+.cube__size-4rem {--cube-size: 4rem;}
+.cube__size-5rem {--cube-size: 5rem;}
+.cube__size-6rem {--cube-size: 6rem;}
+.cube__size-7rem {--cube-size: 7rem;}
+.cube__size-8rem {--cube-size: 8rem;}
+.cube__size-9rem {--cube-size: 9rem;}
+.cube__size-10rem {--cube-size: 10rem;}
+
+/* face colors */
+.cube__face-red {background-color: rgb(182, 54, 54);}
+.cube__face-blue {background-color: rgb(68, 122, 248);}
+.cube__face-green {background-color: rgb(96, 178, 96);}
+
+/* --- cube borders */
+.cube__face-border-white {border: 1px solid rgb(255, 255, 255);}
+.cube__face-border-none {border: none;}
+
+/* still scenes */
+.cube__still-x-45-top {transform: rotateX(-20deg) rotateY(45deg);}
+
+/* --- animation classes --- */
+.cube__animation-xy-360 {animation: xy-360 10s infinite linear;}
+.cube__animation-x-360 {animation: x-360 10s infinite linear;}
+.cube__animation-y-360 {animation: y-360 10s infinite linear;}
+.cube__animation-top-y-360 {animation: y-360-top 10s infinite linear;}
+
+/* animations */
+@keyframes xy-360 {
+    from {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    to {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+
+@keyframes y-360 {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes y-360-top {
+    from {
+        transform: rotateX(-20deg) rotateY(0deg);
+    }
+    to {
+        transform: rotateX(-20deg) rotateY(360deg);
+    }
+}
+
+@keyframes x-360 {
+    from {
+        transform: rotateX(0deg);
+    }
+    to {
+        transform: rotateX(360deg);
+    }
+}
